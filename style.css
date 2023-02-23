@@ -1,0 +1,241 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* ---navbar-- */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    margin: 4em;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 4.1em;
+    margin: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+nav ul li a.active::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid black;
+    bottom: -6px;
+}
+
+nav ul li a:before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid gray;
+    bottom: -6px;
+    transition: .3s; 
+}
+
+/* ---Hero section- */
+
+main{
+    display: flex;
+    gap: 8em;
+    margin-top: 11em;
+}
+
+.left-col{
+    width: 45%;
+}
+
+.right-col{
+    flex-grow: 1;
+}
+
+.left-col h1{
+    font-size: 5.2rem;
+    font-family: 'Playfair Display';
+    font-weight: normal;
+    margin: 0;
+}
+
+.left-col .sub-heading{
+    font-size: 1.5rem;
+}
+
+.left-col .cta-btns{
+    display: flex;
+    gap: 2em;
+    margin: 5em 0;
+}
+
+.left-col .cta-btns .primary-cta{
+    background-color: #f1e2d1;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-radius: 1.9em;
+    padding: 1em 2em;
+}
+
+.left-col .cta-btns .secondary-cta{
+    display: block;
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: black;
+    padding: 1em 0;
+    text-decoration: none;
+   
+}
+
+.left-col .cta-btns .secondary-cta i{
+    width: 20px;
+    transition: transform .3s;
+}
+
+.left-col .news{
+    display: flex;
+    gap: 3em;
+    border: 1px solid black;
+    border-radius: 0.8em;
+    padding: 5em;
+    position: relative;
+}
+
+.news::before{
+    position: absolute;
+    content: "";
+    background: url(images/confetti.svg);
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+}
+
+.left-col .news .employees{
+    font-size: 3.3rem;
+    margin: 0;
+    font-weight: 200;
+    line-height: 100%;
+    
+}
+
+.left-col .news .detail{
+    font-size: 1.54rem;
+    margin: 0;
+}
+
+.right-col{
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: "left ."
+    "left .";
+}
+
+.card{
+    display: flex;
+    padding: 1.1em;
+    border-radius: .8em;
+    align-items: end;
+    background-size: 150%;
+    transition: background-size 800ms;
+}
+
+.card1{
+    grid-area: left;
+    background-image: url(images/clothing1.jpg);
+    position: relative;
+}
+
+.card1:before{
+    position: absolute;
+    content: "";
+    background: url(images/tag.svg) no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 20px;
+    left: -30px;
+    pointer-events: none;
+}
+
+.card2{
+    background-image: url(images/clothing2.jpg);
+}
+
+.card3{
+    background-image: url(images/clothing3.jpg);
+}
+
+.card-details{
+    background: #fff;
+    border-radius: .6em;
+    padding: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 800ms;
+}
+
+.card-details a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.card-details p{
+    font-size: 1.4rem;
+    margin: 0;
+}
+p.price{
+    font-size: 1.8rem;
+}
+
+nav ul li a:hover:before{
+width: 35%;
+}
+
+.cta-btns .primary-cta:hover{
+    background: #e2d1bd;
+}
+
+.secondary-cta:hover i{
+    transform: translateX(10px);
+}
+
+.cta-btns .secondary-cta:hover{
+    text-decoration: underline;
+}
+
+.card:hover{
+    background-size: 160%;
+}
+
+.card:hover .card-details{
+    transform: translatey(-20px);
+}
